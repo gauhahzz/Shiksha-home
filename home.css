@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    background-color: black;
+    height: 100%;
+    position: relative;
+    padding-bottom: 15vh;
+}
+
+.container3 {
+    width: 100%;
+    height: 40vh;
+    top: 5vh;
+    background-color: orangered;
+    position: relative;
+}
+
+.box11 {
+    width: 25%;
+    height: 40vh;
+    position: absolute;
+    background-color: #effcef;
+    left: 10px;
+    padding-left: 10px;
+}
+
+.logo img {
+    position: absolute;
+    z-index: 1;
+    top: 28vh;
+    left: 5%;
+    height: 300px;
+    widows: 300px;
+    background-color: white;
+    border-radius: 50%;
+    border: 10px solid white;
+}
+
+.box11 img {
+    width: 100%;
+    height: 100%;
+}
+
+.box22 {
+    width: 70%;
+    height: 40vh;
+    position: absolute;
+    background-color: black;
+    left: 25%;
+}
+
+.box22 p {
+    font-size: 3vh;
+    position: absolute;
+    right: 5vh;
+    top: 50%;
+    color: white;
+    transform: translateY(-30%);
+    text-align: right;
+    line-height: 1.5;
+    font-family: 'Sen', sans-serif;
+}
+
+.circle1 {
+    height: 55px;
+    width: 25px;
+    background-color: white;
+    border-radius: 0;
+}
+
+.svg-part {
+    height: 95vh;
+    overflow-y: hidden;
+}
+
+.svg-part img {
+    position: relative;
+    top: -25vh;
+}
+
+.maincontents {
+    position: relative;
+    top: 15vh;
+    margin-bottom: 20vh;
+    height: 95vh;
+    background-color: #000;
+}
+
+.heading {
+    position: absolute;
+    top: 30vh;
+    left: 60vw;
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 7vw;
+}
+
+.tagline {
+    position: absolute;
+    top: 50vh;
+    left: 60vw;
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 2vw;
+}
+
+#para1 {
+    position: absolute;
+    color: white;
+    top: 0;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: left;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5vw;
+}
+
+#heading1 {
+    position: absolute;
+    color: white;
+    top: -8vh;
+    right: 16%;
+    font-family: 'Dosis', sans-serif;
+}
+
+#para2 {
+    position: absolute;
+    color: white;
+    top: 80vh;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5vw;
+}
+
+.container {
+    position: relative;
+    top: 20vh;
+    width: 100%;
+    height: 50vh;
+}
+
+.carousel,
+.carousel-item {
+    height: 50vh !important;
+}
+
+.carousel-item {
+    width: 50vh !important;
+}
+
+.carousel {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.nav {
+    display: inline-flex;
+    position: absolute;
+    z-index: 1;
+    width: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 0 20px;
+    border-radius: 40px;
+    top: 5vh;
+    box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+}
+
+.nav-item {
+    color: #83818c;
+    /* padding-left: 2.5%;
+    padding-right: 2.5%; */
+    text-decoration: none;
+    transition: .3s;
+    margin: 0 6px;
+    z-index: 1;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    width: 25%;
+    text-align: center;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: #dfe2ea;
+        border-radius: 8px 8px 0 0;
+        opacity: 0;
+        transition: .3s;
+    }
+}
+
+.nav-item:not(.is-active):hover:before {
+    opacity: 1;
+    bottom: 0;
+}
+
+.nav-item:not(.is-active):hover {
+    color: #333;
+}
+
+.nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    transition: .4s;
+    height: 5px;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 580px) {
+    .nav {
+        overflow: auto;
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    bottom: 0;
+    background-color: #3a3535;
+    z-index: 1;
+}
+
+.footer p {
+    position: absolute;
+    top: 0.5vh;
+    left: 50%;
+    font-family: 'Source Code Pro', monospace;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.imgcontainer {
+    position: relative;
+}
+
+.imgcontainer img {
+    position: relative;
+    width: 2vw;
+    top: 5vh;
+    opacity: 0.5;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.imgcontainer img:hover {
+    opacity: 1;
+}

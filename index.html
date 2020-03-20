@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+2|Dosis&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2|Dosis|Source+Code+Pro&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+
+<body>
+
+    <div class="home">
+        <nav class="nav">
+            <a href="#" class="nav-item is-active" active-color="orange">Home</a>
+            <a href="#" class="nav-item" active-color="green">About</a>
+            <a href="#" class="nav-item" active-color="blue">Events</a>
+            <a href="#" class="nav-item" active-color="rebeccapurple">Contact</a>
+            <span class="nav-indicator"></span>
+        </nav>
+        <div class="logo">
+            <img src="logo.png" alt="my svg" />
+        </div>
+        <div class="svg-part">
+            <img src="back.svg" alt="my svg" />
+        </div>
+
+        <div class="heading">
+            <span>SHIKSHA</span>
+        </div>
+        <div class="tagline">
+            A step towards enlightening the world of darkness
+        </div>
+        <div class="maincontents">
+            <h5 id="heading1">What Shiksha Is?</h5>
+            <p id="para1">
+                The root of shiksha dates back to the year 2006 when a bunch of students came up with the initiative to help the children who don’t have access to basic education. It was headed by Veena Goyal and Nikhil Singla and running succesfully till date giving
+                education and guidance to hundreds of students.
+            </p>
+
+            <div class="container">
+                <div class="carousel" id="demo-carousel">
+                    <a class="carousel-item" href="#one!"><img src="angan1.png"></a>
+                    <a class="carousel-item" href="#two!"><img src="angan2.png"></a>
+                    <a class="carousel-item" href="#three!"><img src="angan3.png"></a>
+                    <a class="carousel-item" href="#four!"><img src="angan4.png"></a>
+                    <a class="carousel-item" href="#five!"><img src="angan2.png"></a>
+                </div>
+            </div>
+
+            <p id="para2">
+                SHIKSHA under the aegis of SCSA Nit Kurukshetra, works for providing an enabling environment to kindle the light of education in underprivileged children living in and around the campus.
+            </p>
+
+
+        </div>
+        <div class="container3">
+            <div class="box11">
+                <img src="image%202.jpg" alt="run" />
+            </div>
+            <div class="box22">
+                <p>
+                    Shiksha functions under the able guidance of -<br/>Dr. Neeraj Kaushik (Prof-In-Charge,SCSA) <br/>Dr. P. C. Tewari (Advisor, SCSA)
+                </p>
+                <div class="circle1"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <p>Copyright @2019</p>
+        <center>
+            <div class="imgcontainer">
+                <a href="#"><img src="insta.png" alt="insta"></a>
+                <a href="#"><img src="fb.png" alt="fb"></a>
+                <a href="#"><img src="utube.png" alt="utube"></a>
+            </div>
+        </center>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#demo-carousel').carousel();
+        });
+
+        const indicator = document.querySelector('.nav-indicator');
+        const items = document.querySelectorAll('.nav-item');
+
+        function handleIndicator(el) {
+            items.forEach(item => {
+                item.classList.remove('is-active');
+                item.removeAttribute('style');
+            });
+
+            indicator.style.width = `${el.offsetWidth}px`;
+            indicator.style.left = `${el.offsetLeft}px`;
+            indicator.style.backgroundColor = el.getAttribute('active-color');
+
+            el.classList.add('is-active');
+            el.style.color = el.getAttribute('active-color');
+        }
+
+
+        items.forEach((item, index) => {
+            item.addEventListener('click', (e) => {
+                handleIndicator(e.target)
+            });
+            item.classList.contains('is-active') && handleIndicator(item);
+        });
+    </script>
+
+</body>
+
+</html>
