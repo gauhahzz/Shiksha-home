@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    background-color: black;
+    height: 100%;
+    position: relative;
+    padding-bottom: 15vh;
+}
+
+.container3 {
+    width: 100%;
+    height: 40vh;
+    top: 5vh;
+    background-color: orangered;
+    position: relative;
+}
+
+.box11 {
+    width: 25%;
+    height: 40vh;
+    position: absolute;
+    background-color: #effcef;
+    left: 10px;
+    padding-left: 10px;
+}
+
+.logo img {
+    position: absolute;
+    z-index: 1;
+    top: 28vh;
+    left: 5%;
+    height: 300px;
+    widows: 300px;
+    background-color: white;
+    border-radius: 50%;
+    border: 10px solid white;
+}
+
+.box11 img {
+    width: 100%;
+    height: 100%;
+}
+
+.box22 {
+    width: 70%;
+    height: 40vh;
+    position: absolute;
+    background-color: black;
+    left: 25%;
+}
+
+.box22 p {
+    font-size: 3vh;
+    position: absolute;
+    right: 5vh;
+    top: 50%;
+    color: white;
+    transform: translateY(-30%);
+    text-align: right;
+    line-height: 1.5;
+    font-family: 'Sen', sans-serif;
+}
+
+.circle {
+    height: 55px;
+    width: 25px;
+    background-color: white;
+    border-radius: 0;
+}
+
+.svg-part {
+    height: 95vh;
+    overflow-y: hidden;
+}
+
+.svg-part img {
+    position: relative;
+    top: -25vh;
+}
+
+.maincontents {
+    position: relative;
+    top: 15vh;
+    margin-bottom: 20vh;
+    height: 95vh;
+    background-color: #000;
+}
+
+.heading {
+    position: absolute;
+    top: 30vh;
+    left: 60vw;
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 7vw;
+}
+
+.tagline {
+    position: absolute;
+    top: 50vh;
+    left: 60vw;
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 2vw;
+}
+
+#para1 {
+    position: absolute;
+    color: white;
+    top: 0;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5vw;
+}
+
+#para2 {
+    position: absolute;
+    color: white;
+    top: 80vh;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5vw;
+}
+
+.container {
+    position: relative;
+    top: 20vh;
+    width: 100%;
+    height: 50vh;
+}
+
+.carousel,
+.carousel-item {
+    height: 50vh !important;
+}
+
+.carousel-item {
+    width: 50vh !important;
+}
+
+.carousel {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
