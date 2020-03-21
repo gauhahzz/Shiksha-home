@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+2|Dosis|Source+Code+Pro&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 </head>
 
@@ -38,8 +40,8 @@
             A step towards enlightening the world of darkness
         </div>
         <div class="maincontents">
-            <h5 id="heading1">What Shiksha Is?</h5>
-            <p id="para1">
+            <h5 id="heading1" data-aos="fade-left">What Shiksha Is?</h5>
+            <p id="para1" data-aos="fade-right">
                 The root of shiksha dates back to the year 2006 when a bunch of students came up with the initiative to help the children who don’t have access to basic education. It was headed by Veena Goyal and Nikhil Singla and running succesfully till date giving
                 education and guidance to hundreds of students.
             </p>
@@ -54,15 +56,15 @@
                 </div>
             </div>
 
-            <p id="para2">
+            <p id="para2" data-aos="fade-up">
                 SHIKSHA under the aegis of SCSA Nit Kurukshetra, works for providing an enabling environment to kindle the light of education in underprivileged children living in and around the campus.
             </p>
 
 
         </div>
         <div class="container3">
-            <div class="box11">
-                <img src="image%202.jpg" alt="run" />
+            <div class="box11" style="background-color: black;">
+                <img src="image%202.jpg" alt="run" data-aos="zoom-in-right">
             </div>
             <div class="box22">
                 <p>
@@ -82,16 +84,18 @@
             <div class="imgcontainer">
                 <a href="#"><img src="insta.png" alt="insta"></a>
                 <a href="#"><img src="fb.png" alt="fb"></a>
-                <a href="#"><img src="gmail.png" alt="gmail"></a>
+                <a href="#"><img src="utube.png" alt="utube"></a>
             </div>
         </center>
     </div>
 
     <script>
+        AOS.init({
+            duration: 1200
+        });
         $(document).ready(function() {
             $('#demo-carousel').carousel();
         });
-
         const indicator = document.querySelector('.nav-indicator');
         const items = document.querySelectorAll('.nav-item');
 
@@ -100,16 +104,12 @@
                 item.classList.remove('is-active');
                 item.removeAttribute('style');
             });
-
             indicator.style.width = `${el.offsetWidth}px`;
             indicator.style.left = `${el.offsetLeft}px`;
             indicator.style.backgroundColor = el.getAttribute('active-color');
-
             el.classList.add('is-active');
             el.style.color = el.getAttribute('active-color');
         }
-
-
         items.forEach((item, index) => {
             item.addEventListener('click', (e) => {
                 handleIndicator(e.target)
